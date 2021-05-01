@@ -1,5 +1,5 @@
 
-public class TestStack {
+public class StackTest1 {
 	public static void main(String[] args) {
 		System.out.println("main's start");
 		method1();
@@ -26,7 +26,7 @@ public class TestStack {
 		
 		
 		
-			int[] array = new int[5];
+			int[] array = new int[5]; 
 			for( int i = 0; i < 6; i++) {
 				array[i]=i;
 				System.out.println(array[i]);

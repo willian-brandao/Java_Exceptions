@@ -2,10 +2,10 @@
 public class Employee {
 	private String name;
 	
-	private String name() {
+	private String getName() {
 		return name;
 	}
-	private void setName() {
+	void setName(String name) {
 		this.name = name;
 	}
 }
