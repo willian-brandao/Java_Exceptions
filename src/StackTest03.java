@@ -10,8 +10,8 @@ public class StackTest03 {
 		System.out.println("Inicio do metodo 1");
 		try {
 			metodo2();
-		} catch (ArithmeticException e) {
-			System.out.println("Erro Encontrado. " + e.getMessage());
+		} catch (MyException e) {
+			System.err.println("Erro Encontrado. " + e.getMessage());
 			e.printStackTrace();
 		}
 		System.out.println("Fim do metodo 1");
@@ -24,7 +24,7 @@ public class StackTest03 {
 		int y = 0;
 
 		if (y == 0) {
-			ArithmeticException ex = new ArithmeticException("O denominador é 0");
+			MyException ex = new MyException("MyException: O denominador é 0");
 			throw ex;
 		} else {
 			double z = (x / y);
