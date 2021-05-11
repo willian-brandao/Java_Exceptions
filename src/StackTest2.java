@@ -1,36 +1,34 @@
-
-public class StackTest2 {
-
-		public static void main(String[] args) {
-			System.out.println("main's start");
-			try {
-				method1();
-			}catch(NullPointerException | ArrayIndexOutOfBoundsException | ArithmeticException e) {
-				System.out.println("Error finded "+e.getMessage());
-				e.printStackTrace();
-				if( e instanceof ArithmeticException )
-					System.out.println("We taking with / by zero");
+public class StackTest2{
+	public static void main(String[] args) {
+		System.out.println("Inicio main");
+		try {
+			metodo1();
+		}catch( NullPointerException | ArrayIndexOutOfBoundsException  | ArithmeticException e) {
+			System.out.println("Erro Econtrado. "+e.getMessage());
+			e.printStackTrace();
+			if( e instanceof ArithmeticException) {
+				System.out.println("Estamos lidando com uma divisão por 0");
 			}
-			System.out.println("main's end");
 		}
-		private static void method1() {
-			System.out.println("method1's start");
-				method2();
-			System.out.println("method1's end");
-		}
-		private static void method2() {
-			Employee e = null; 
-			//e.setName("Willian");
-			int x = 5;
-			double y = 5/0;
-			System.out.println("method2's start");
-				int[] array = new int[5]; 
-				for( int i = 0; i < 6; i++) {
-					array[i]=i;
-					System.out.println(array[i]);
-				}
-			System.out.println("method2's end");
-		}
+		System.out.println("Fim main");
 	}
-
-
+	private static void metodo1() {
+		System.out.println("Inicio metodo 1");
+		metodo2();
+		System.out.println("Fim do metodo 1");
+	}
+	private static void metodo2() {
+		
+		int x = 5;
+		double y = x / 0;
+		Employee E = null;
+		E.setName("Janilton");
+		System.out.println("Inicio do metodo 2");
+		int[] array = new int[5];
+		for( int i = 0; i < 6; i++) {
+			array[i] = i;
+			System.out.println(array[i]);
+		}
+		System.out.println("Fim do metodo 2");
+	}
+}
